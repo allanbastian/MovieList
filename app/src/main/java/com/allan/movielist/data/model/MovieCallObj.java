@@ -1,8 +1,29 @@
 package com.allan.movielist.data.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class MovieCallObj {
 
-    private String category, language, genre, sort;
+    @SerializedName("category")
+    @Expose
+    private String category;
+    @SerializedName("language")
+    @Expose
+    private String language;
+    @SerializedName("genre")
+    @Expose
+    private String genre;
+    @SerializedName("sort")
+    @Expose
+    private String sort;
+
+    public MovieCallObj(String category, String language, String genre, String sort) {
+        this.category = category;
+        this.language = language;
+        this.genre = genre;
+        this.sort = sort;
+    }
 
     public String getCategory() {
         return category;
